@@ -8,19 +8,19 @@ using System.Web;
 using System.Web.Mvc;
 using ClassLibrary1;
 
-namespace persona_MVC.Models
+namespace persona_MVC.Controllers
 {
-    public class PERSONAsController : Controller
+    public class personasController : Controller
     {
         private PERSONAEntities db = new PERSONAEntities();
 
-        // GET: PERSONAs
+        // GET: personas
         public ActionResult Index()
         {
             return View(db.PERSONA.ToList());
         }
 
-        // GET: PERSONAs/Details/5
+        // GET: personas/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -35,13 +35,13 @@ namespace persona_MVC.Models
             return View(pERSONA);
         }
 
-        // GET: PERSONAs/Create
+        // GET: personas/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: PERSONAs/Create
+        // POST: personas/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -58,7 +58,7 @@ namespace persona_MVC.Models
             return View(pERSONA);
         }
 
-        // GET: PERSONAs/Edit/5
+        // GET: personas/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -73,7 +73,7 @@ namespace persona_MVC.Models
             return View(pERSONA);
         }
 
-        // POST: PERSONAs/Edit/5
+        // POST: personas/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que quiere enlazarse. Para obtener 
         // más detalles, vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -89,7 +89,7 @@ namespace persona_MVC.Models
             return View(pERSONA);
         }
 
-        // GET: PERSONAs/Delete/5
+        // GET: personas/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -104,7 +104,7 @@ namespace persona_MVC.Models
             return View(pERSONA);
         }
 
-        // POST: PERSONAs/Delete/5
+        // POST: personas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
