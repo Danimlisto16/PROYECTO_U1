@@ -10,6 +10,7 @@ namespace persona_MVC.Controllers
     {
         public ActionResult Index()
         {
+            //se ha cambiado la cadena de conexion!
             return View();
         }
 
